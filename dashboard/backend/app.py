@@ -194,18 +194,29 @@ if __name__ == "__main__":
     # Start scheduler in background thread
     import threading
     def _run_scheduler():
+        log_path = WORKSPACE / "ADWs" / "logs" / "scheduler.log"
+        log_path.parent.mkdir(parents=True, exist_ok=True)
         try:
             import importlib.util
             spec = importlib.util.spec_from_file_location("scheduler", WORKSPACE / "scheduler.py")
             sched_module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(sched_module)
             sched_module.setup_schedule()
+
             import schedule as sched_lib
             import time as _time
-            while True:
-                sched_lib.run_pending()
-                _time.sleep(30)
+            from datetime import datetime as _dt
+
+            with open(log_path, "a") as log:
+                log.write(f"\n[{_dt.now().strftime('%Y-%m-%d %H:%M:%S')}] Scheduler started ({len(sched_lib.get_jobs())} routines)\n")
+                log.flush()
+
+                while True:
+                    sched_lib.run_pending()
+                    _time.sleep(30)
         except Exception as e:
+            with open(log_path, "a") as log:
+                log.write(f"Scheduler error: {e}\n")
             print(f"Scheduler failed to start: {e}")
 
     sched_thread = threading.Thread(target=_run_scheduler, daemon=True, name="scheduler")

@@ -16,15 +16,26 @@ def _check_process(check_cmd: str) -> dict:
         return {"running": False, "detail": ""}
 
 
+def _check_scheduler() -> dict:
+    """Check if scheduler thread is running inside the dashboard process."""
+    import threading
+    for t in threading.enumerate():
+        if t.name == "scheduler" and t.is_alive():
+            return {"running": True, "detail": "Running (embedded in dashboard)"}
+    # Fallback: check for standalone scheduler.py process
+    result = _check_process("ps aux | grep '[s]cheduler.py' | grep -v grep")
+    return result
+
+
 @bp.route("/api/services")
 def list_services():
     services = [
         {
             "id": "scheduler",
             "name": "Scheduler",
-            "description": "Automated routines (daily, weekly, monthly)",
-            "command": "make scheduler",
-            **_check_process("ps aux | grep '[s]cheduler.py' | grep -v grep"),
+            "description": "Automated routines (daily, weekly, monthly) — runs with dashboard",
+            "command": "make dashboard-app",
+            **_check_scheduler(),
         },
         {
             "id": "telegram",
