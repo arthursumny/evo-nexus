@@ -84,7 +84,7 @@ Connect your existing tools via MCP servers, API clients, or OAuth:
 | **Notion** | MCP | Knowledge base, pages, databases |
 | **Obsidian** | CLI | Vault management, notes, search |
 
-Social media accounts (YouTube, Instagram, LinkedIn) are connected via OAuth through the dashboard or `make social-auth`.
+Social media accounts (YouTube, Instagram, LinkedIn) are connected via OAuth through the dashboard.
 
 ---
 
@@ -140,7 +140,7 @@ STRIPE_SECRET_KEY=sk_live_...
 TELEGRAM_BOT_TOKEN=your_token
 TELEGRAM_CHAT_ID=your_chat_id
 
-# Social media (connect via dashboard or `make social-auth`)
+# Social media (connect via dashboard Integrations page)
 SOCIAL_YOUTUBE_1_API_KEY=...
 SOCIAL_INSTAGRAM_1_ACCESS_TOKEN=...
 ```
@@ -184,14 +184,6 @@ Open Claude Code in the project directory — it reads `CLAUDE.md` automatically
 
 # Or just describe what you need — Claude routes to the right agent
 ```
-
-### 6. Connect social media (optional)
-
-```bash
-make social-auth
-```
-
-Opens a local OAuth app (localhost:8765) to connect YouTube, Instagram, LinkedIn, Twitter, TikTok, Twitch accounts. Or connect them through the dashboard's Integrations page.
 
 ---
 
@@ -285,7 +277,7 @@ Workspace folders (`workspace/daily-logs/`, `workspace/projects/`, etc.) are cre
 # Setup & Dashboard
 make setup           # Interactive setup wizard
 make dashboard-app   # Start web dashboard on :8080
-make social-auth     # OAuth login for social media accounts
+
 
 # Routines
 make scheduler       # Start automated routine scheduler

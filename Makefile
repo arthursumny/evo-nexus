@@ -1,8 +1,14 @@
 # ============================================================
-# ADW Rotinas — Makefile
+# OpenClaude — Makefile
 # ============================================================
-# Usage: make <routine>
-# Logs: ADWs/logs/
+# Usage: make <command>
+# Docs: ROUTINES.md
+
+# ── Setup ──────────────────────────────────
+setup:              ## 🔧 Interactive setup wizard (prerequisites, config, folders)
+	uv run python setup.py
+
+# ── Routines ───────────────────────────────
 # ============================================================
 
 PYTHON := uv run python
