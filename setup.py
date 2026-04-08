@@ -365,6 +365,11 @@ def main():
     # Folders
     create_folders(config)
 
+    # Install Python dependencies
+    print(f"  {DIM}Installing Python dependencies...{RESET}")
+    os.system(f"cd {WORKSPACE} && uv sync -q 2>/dev/null")
+    print(f"  {GREEN}✓{RESET} Installed Python dependencies")
+
     # Dashboard build
     frontend_dir = WORKSPACE / "dashboard" / "frontend"
     if (frontend_dir / "package.json").exists():

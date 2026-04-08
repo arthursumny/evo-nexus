@@ -118,7 +118,7 @@ daily: sync review  ## Combo: sync meetings + review todoist
 scheduler:          ## ⏰ Start routine scheduler (runs in background)
 	$(PYTHON) scheduler.py
 
-dashboard-app:      ## 🖥️  Start Dashboard App (React + Flask, localhost:8080) — includes Social Auth
+dashboard-app:      ## 🖥️  Start Dashboard App (React + Flask, localhost:8080)
 	cd dashboard/frontend && npm run build && cd ../backend && $(PYTHON) app.py
 
 telegram:           ## 📨 Start Telegram bot in background (screen)
