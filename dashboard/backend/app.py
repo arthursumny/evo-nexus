@@ -179,4 +179,16 @@ def serve_frontend(path):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=False)
+    # Read port from workspace.yaml or env, fallback to 8080
+    port = int(os.environ.get("OPENCLAUDE_PORT", 8080))
+    try:
+        import yaml
+        config_path = WORKSPACE / "config" / "workspace.yaml"
+        if config_path.is_file():
+            with open(config_path) as f:
+                cfg = yaml.safe_load(f)
+            if cfg and cfg.get("port"):
+                port = int(cfg["port"])
+    except Exception:
+        pass
+    app.run(host="0.0.0.0", port=port, debug=False)
