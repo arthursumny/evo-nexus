@@ -85,6 +85,7 @@ def get_schedule():
             "frequency": frequency,
             "time": time_str or "",
             "agent": agent,
+            "custom": "custom/" in script,
         })
 
     return jsonify(entries)

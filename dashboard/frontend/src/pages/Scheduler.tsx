@@ -19,6 +19,7 @@ interface ScheduledTask {
   time: string
   agent: string
   script: string
+  custom?: boolean
 }
 
 export default function Scheduler() {
@@ -247,7 +248,14 @@ export default function Scheduler() {
           <tbody>
             {tasks.map((task, i) => (
               <tr key={i} className="border-t border-[#344054]/50 hover:bg-white/5 transition-colors">
-                <td className="p-4 text-[#F9FAFB] font-medium">{task.name}</td>
+                <td className="p-4 text-[#F9FAFB] font-medium">
+                  {task.name}
+                  {task.custom ? (
+                    <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-[#344054] text-[#667085]">custom</span>
+                  ) : (
+                    <span className="ml-2 text-[10px] px-1.5 py-0.5 rounded bg-[#00FFA7]/10 text-[#00FFA7]">core</span>
+                  )}
+                </td>
                 <td className="p-4">
                   <code className="text-xs bg-black/20 px-2 py-1 rounded text-[#D0D5DD]">{task.schedule}</code>
                 </td>
