@@ -1,6 +1,6 @@
 ---
 name: fin-monthly-close-kickoff
-description: "Monthly close kickoff — initiates the month-end closing process with a checklist, simplified P&L, pending reconciliations, receivables, payables, and action items for the finance team. Trigger when user says 'fechamento mensal', 'monthly close', 'inicia fechamento', 'kickoff do fechamento', or on the 1st of each month."
+description: "Monthly close kickoff — initiates the month-end closing process with a checklist, simplified P&L, pending reconciliations, receivables, payables, and action items for the finance team. Trigger when user says 'monthly close', 'start closing', 'closing kickoff', or on the 1st of each month."
 ---
 
 # Monthly Close Kickoff

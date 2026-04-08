@@ -1,6 +1,6 @@
 ---
 name: int-linear-review
-description: "Review Linear projects — check issues in review, blockers, stale items, sprint progress, and assigned tasks. Use when user says 'checa o linear', 'review do linear', 'como tá o sprint', 'issues em review', 'status dos projetos', 'o que tá travado', or any reference to checking project/issue status in Linear."
+description: "Review Linear projects — check issues in review, blockers, stale items, sprint progress, and assigned tasks. Use when user says 'check linear', 'linear review', 'sprint status', 'issues in review', 'project status', 'what is blocked', or any reference to checking project/issue status in Linear."
 ---
 
 # Linear Review — Project Check

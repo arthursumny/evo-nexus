@@ -1,6 +1,6 @@
 ---
 name: sage-competitive-analysis
-description: "Analyze competitive landscape and market positioning. Use when user says 'análise competitiva', 'como tão os concorrentes', 'posicionamento', 'quem compete com a gente', 'benchmark', 'market analysis', or any reference to competitors, market positioning, or competitive advantages."
+description: "Analyze competitive landscape and market positioning. Use when user says 'competitive analysis', 'positioning', 'who are our competitors', 'benchmark', 'market analysis', or any reference to competitors, market positioning, or competitive advantages."
 ---
 
 # Competitive Analysis — Market Positioning

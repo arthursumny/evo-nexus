@@ -1,6 +1,6 @@
 ---
 name: pulse-daily
-description: "Daily community pulse report — reads Discord AND WhatsApp messages from the last 24h, analyzes activity, sentiment, support questions, and top topics. Generates an HTML report using the Evolution brand. Use when user says 'pulso da comunidade', 'community pulse', 'como tá o discord', 'como tá o whatsapp', 'relatório diário comunidade', or any reference to daily community health check."
+description: "Daily community pulse report — reads Discord AND WhatsApp messages from the last 24h, analyzes activity, sentiment, support questions, and top topics. Generates an HTML report using the Evolution brand. Use when user says 'community pulse', 'daily community report', or any reference to daily community health check."
 ---
 
 # Daily Community Pulse

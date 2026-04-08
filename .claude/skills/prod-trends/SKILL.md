@@ -1,6 +1,6 @@
 ---
 name: prod-trends
-description: "Weekly trends analysis — compares community, GitHub, and financial metrics week-over-week to detect patterns, risks and opportunities. Use when user says 'análise de tendências', 'trends', 'como estão as métricas', 'comparativo semanal', 'evolução das métricas', or as part of the weekly review routine."
+description: "Weekly trends analysis — compares community, GitHub, and financial metrics week-over-week to detect patterns, risks and opportunities. Use when user says 'trends analysis', 'trends', 'how are the metrics', 'weekly comparison', 'metrics evolution', or as part of the weekly review routine."
 ---
 
 # Trends Analysis — Weekly Comparison

@@ -1,6 +1,6 @@
 ---
 name: int-github-review
-description: "Review GitHub repos — PRs abertos, issues da comunidade, stars/forks, releases, contribuidores. Use when user says 'checa o github', 'review do github', 'como tão os repos', 'PRs abertos', 'issues do github', 'status dos repositórios', or any reference to checking GitHub repos status."
+description: "Review GitHub repos — open PRs, community issues, stars/forks, releases, contributors. Use when user says 'check github', 'github review', 'repo status', 'open PRs', 'github issues', 'repository status', or any reference to checking GitHub repos status."
 ---
 
 # GitHub Review — Repository Status

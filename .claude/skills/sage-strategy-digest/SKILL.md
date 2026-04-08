@@ -1,6 +1,6 @@
 ---
 name: sage-strategy-digest
-description: "Generate weekly strategy digest consolidating financial, product, community, and market data into strategic insights. Use when user says 'strategy digest', 'digest estratégico', 'resumo estratégico da semana', 'como tá a empresa', or as part of the weekly strategy review routine."
+description: "Generate weekly strategy digest consolidating financial, product, community, and market data into strategic insights. Use when user says 'strategy digest', 'weekly strategy summary', 'company status', or as part of the weekly strategy review routine."
 ---
 
 # Strategy Digest — Weekly Strategic Summary

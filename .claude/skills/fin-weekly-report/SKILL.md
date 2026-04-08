@@ -1,6 +1,6 @@
 ---
 name: fin-weekly-report
-description: "Weekly financial report — consolidates Stripe and Omie data for the week: revenue, expenses, cash flow projection, overdue accounts, and variance analysis. Trigger when user says 'relatório financeiro semanal', 'financial weekly', 'como foi a semana financeiramente', 'resumo financeiro da semana'."
+description: "Weekly financial report — consolidates Stripe and Omie data for the week: revenue, expenses, cash flow projection, overdue accounts, and variance analysis. Trigger when user says 'financial weekly', 'weekly financial report', or 'financial summary of the week'."
 ---
 
 # Financial Weekly — Weekly Financial Report

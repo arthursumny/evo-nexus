@@ -1,6 +1,6 @@
 ---
 name: int-instagram
-description: "Query Instagram Graph API — profile stats, recent posts, engagement, insights. Supports multi-account (OAuth via Social Auth App). Use when user asks about Instagram metrics, seguidores, posts, engagement, 'como tá o Instagram', 'métricas do insta', or any reference to Instagram analytics."
+description: "Query Instagram Graph API — profile stats, recent posts, engagement, insights. Supports multi-account (OAuth via Social Auth App). Use when user asks about Instagram metrics, followers, posts, engagement, or any reference to Instagram analytics."
 ---
 
 # Instagram Graph API

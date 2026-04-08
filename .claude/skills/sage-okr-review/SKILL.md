@@ -1,6 +1,6 @@
 ---
 name: sage-okr-review
-description: "Review and track OKRs progress. Use when user says 'como tão os OKRs', 'review de OKRs', 'progresso das metas', 'atualiza OKRs', 'definir OKRs do trimestre', or any reference to objectives, key results, or quarterly goals."
+description: "Review and track OKRs progress. Use when user says 'OKR review', 'OKR progress', 'update OKRs', 'define quarterly OKRs', or any reference to objectives, key results, or quarterly goals."
 ---
 
 # OKR Review — Goal Tracking

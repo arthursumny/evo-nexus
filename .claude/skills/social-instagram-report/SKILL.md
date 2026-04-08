@@ -1,6 +1,6 @@
 ---
 name: social-instagram-report
-description: "Instagram analytics report — queries profile stats, recent posts, engagement rates, insights for all connected accounts. Generates HTML report. Use when user says 'instagram report', 'relatório instagram', 'como tá o insta', 'métricas instagram', or any reference to Instagram performance analysis."
+description: "Instagram analytics report — queries profile stats, recent posts, engagement rates, insights for all connected accounts. Generates HTML report. Use when user says 'instagram report', 'instagram metrics', or any reference to Instagram performance analysis."
 ---
 
 # Instagram Report — Profile Analytics

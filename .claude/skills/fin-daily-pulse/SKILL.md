@@ -1,6 +1,6 @@
 ---
 name: fin-daily-pulse
-description: "Daily financial pulse — queries Stripe (MRR, charges, churn, failures) and Omie (accounts payable/receivable, invoices) to generate an HTML snapshot of the company's financial health. Trigger when user says 'financial pulse', 'pulso financeiro', 'como tá o financeiro hoje', 'snapshot financeiro', or 'métricas financeiras'."
+description: "Daily financial pulse — queries Stripe (MRR, charges, churn, failures) and Omie (accounts payable/receivable, invoices) to generate an HTML snapshot of the company's financial health. Trigger when user says 'financial pulse', 'financial snapshot', or 'financial metrics'."
 ---
 
 # Financial Pulse — Daily Financial Snapshot

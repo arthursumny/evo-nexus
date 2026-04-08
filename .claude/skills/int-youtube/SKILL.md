@@ -1,6 +1,6 @@
 ---
 name: int-youtube
-description: "Query YouTube Data API v3 — channel stats, recent videos, top videos, comments. Supports multi-account (OAuth or API Key). Use when user asks about YouTube metrics, canal YouTube, inscritos, views, vídeos, engagement, 'como tá o YouTube', 'métricas do canal', or any reference to YouTube analytics."
+description: "Query YouTube Data API v3 — channel stats, recent videos, top videos, comments. Supports multi-account (OAuth or API Key). Use when user asks about YouTube metrics, YouTube channel, subscribers, views, videos, engagement, or any reference to YouTube analytics."
 ---
 
 # YouTube Data API v3

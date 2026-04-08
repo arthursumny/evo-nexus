@@ -1,6 +1,6 @@
 ---
 name: int-linkedin
-description: "Query LinkedIn API — profile info, posts (when approved), org stats. Supports multi-account via OAuth. Use when user asks about LinkedIn metrics, perfil LinkedIn, posts LinkedIn, 'como tá o LinkedIn', or any reference to LinkedIn analytics."
+description: "Query LinkedIn API — profile info, posts (when approved), org stats. Supports multi-account via OAuth. Use when user asks about LinkedIn metrics, LinkedIn profile, LinkedIn posts, or any reference to LinkedIn analytics."
 ---
 
 # LinkedIn API

@@ -1,6 +1,6 @@
 ---
 name: social-youtube-report
-description: "YouTube analytics report — queries channel stats, recent videos, engagement rates, top content. Generates HTML report. Use when user says 'youtube report', 'relatório youtube', 'como tá o canal', 'métricas youtube', 'youtube analytics', or any reference to YouTube performance analysis. Supports daily, weekly, and monthly periods."
+description: "YouTube analytics report — queries channel stats, recent videos, engagement rates, top content. Generates HTML report. Use when user says 'youtube report', 'youtube metrics', 'youtube analytics', or any reference to YouTube performance analysis. Supports daily, weekly, and monthly periods."
 ---
 
 # YouTube Report — Channel Analytics

@@ -1,6 +1,6 @@
 ---
 name: social-linkedin-report
-description: "LinkedIn analytics report — profile data, posts (when available), org stats. Use when user says 'linkedin report', 'relatório linkedin', 'como tá o linkedin', or any reference to LinkedIn performance."
+description: "LinkedIn analytics report — profile data, posts (when available), org stats. Use when user says 'linkedin report', 'linkedin analytics', or any reference to LinkedIn performance."
 ---
 
 # LinkedIn Report — Analytics

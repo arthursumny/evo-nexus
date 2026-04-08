@@ -1,6 +1,6 @@
 ---
 name: pulse-weekly
-description: "Weekly community analysis report — aggregates Discord AND WhatsApp activity, engagement metrics, sentiment trends, top contributors, product insights, and docs gaps. Generates an HTML report using the Evolution brand. Use when user says 'relatório semanal comunidade', 'weekly community', 'análise da comunidade', 'como foi a semana no discord', 'como foi o whatsapp', or any reference to weekly community analysis."
+description: "Weekly community analysis report — aggregates Discord AND WhatsApp activity, engagement metrics, sentiment trends, top contributors, product insights, and docs gaps. Generates an HTML report using the Evolution brand. Use when user says 'weekly community', 'community analysis', 'weekly community report', or any reference to weekly community analysis."
 ---
 
 # Weekly Community Report

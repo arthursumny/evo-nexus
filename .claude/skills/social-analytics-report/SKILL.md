@@ -1,6 +1,6 @@
 ---
 name: social-analytics-report
-description: "Unified social media analytics report — consolidates YouTube, Instagram, and LinkedIn data into one cross-platform HTML dashboard. Compares engagement, followers, top content across all platforms. Use when user says 'social analytics', 'relatório redes sociais', 'como tão as redes', 'social report', 'métricas sociais', 'cross-platform', or any reference to unified social media performance."
+description: "Unified social media analytics report — consolidates YouTube, Instagram, and LinkedIn data into one cross-platform HTML dashboard. Compares engagement, followers, top content across all platforms. Use when user says 'social analytics', 'social media report', 'social report', 'social metrics', 'cross-platform', or any reference to unified social media performance."
 ---
 
 # Social Analytics — Consolidated Cross-Platform Report

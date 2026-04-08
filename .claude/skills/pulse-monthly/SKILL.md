@@ -1,6 +1,6 @@
 ---
 name: pulse-monthly
-description: "Monthly community report — aggregates Discord and WhatsApp activity for the full month: MAM, growth, sentiment trends, top contributors, product insights, docs gaps, and week-over-week evolution. Generates an HTML report using the Evolution brand. Use when user says 'relatório mensal comunidade', 'community monthly', 'como foi o mês na comunidade', 'monthly pulse', 'relatório mensal discord', or any reference to monthly community analysis."
+description: "Monthly community report — aggregates Discord and WhatsApp activity for the full month: MAM, growth, sentiment trends, top contributors, product insights, docs gaps, and week-over-week evolution. Generates an HTML report using the Evolution brand. Use when user says 'community monthly', 'monthly community report', 'monthly pulse', or any reference to monthly community analysis."
 ---
 
 # Monthly Community Report

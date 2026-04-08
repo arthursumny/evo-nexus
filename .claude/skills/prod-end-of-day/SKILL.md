@@ -1,6 +1,6 @@
 ---
 name: prod-end-of-day
-description: "End-of-day consolidation — analyzes agent memory, ADW logs, meetings, tasks, and learnings to generate a complete daily log. Trigger when user says 'end of day', 'wrap up', 'encerra o dia', 'finaliza', 'done for today', 'goodnight', 'boa noite', 'shutdown', or anything that signals finishing a work session."
+description: "End-of-day consolidation — analyzes agent memory, ADW logs, meetings, tasks, and learnings to generate a complete daily log. Trigger when user says 'end of day', 'wrap up', 'done for today', 'goodnight', 'shutdown', or anything that signals finishing a work session."
 ---
 
 # End of Day — Daily Consolidation

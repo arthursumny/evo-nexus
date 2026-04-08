@@ -1,6 +1,6 @@
 ---
 name: prod-dashboard
-description: "Daily consolidation dashboard — reads outputs from all routines (morning, linear, github, community, strategy, meetings, metrics) and generates a unified HTML dashboard. Trigger when user says 'dashboard', 'gera dashboard', 'visão geral', 'consolidação', 'overview', or 'painel geral'."
+description: "Daily consolidation dashboard — reads outputs from all routines (morning, linear, github, community, strategy, meetings, metrics) and generates a unified HTML dashboard. Trigger when user says 'dashboard', 'generate dashboard', 'overview', 'consolidation', or 'general panel'."
 ---
 
 # Consolidated Dashboard — 360 View

@@ -1,6 +1,6 @@
 ---
 name: pulse-faq-sync
-description: "Sync and update the community FAQ from Discord conversations, WhatsApp groups, and GitHub issues. Identifies recurring questions, adds new entries, and keeps the FAQ as a living knowledge base. Use when user says 'atualiza faq', 'sync faq', 'faq da comunidade', 'perguntas frequentes', or when running community routines that detect unanswered/recurring questions."
+description: "Sync and update the community FAQ from Discord conversations, WhatsApp groups, and GitHub issues. Identifies recurring questions, adds new entries, and keeps the FAQ as a living knowledge base. Use when user says 'update faq', 'sync faq', 'community faq', 'frequently asked questions', or when running community routines that detect unanswered/recurring questions."
 ---
 
 # FAQ Sync — Living Knowledge Base
