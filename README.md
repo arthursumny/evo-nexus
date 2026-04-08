@@ -21,9 +21,20 @@
 
 ## What It Is
 
-OpenClaude is a multi-agent workspace built on top of Claude Code. It turns a single AI assistant into a team of 9 specialized agents — each with its own domain, skills, persistent memory, and automated routines. The result is a production system that runs daily operations for a founder/CEO: from morning briefings to financial reports, community monitoring, social analytics, and end-of-day consolidation.
+OpenClaude is an open source alternative to [OpenClaw](https://github.com/openclaw) — purpose-built for the **Anthropic Claude Code** ecosystem. While OpenClaw targets OpenAI's infrastructure, OpenClaude is designed from the ground up to leverage Claude Code's unique capabilities: native agents, skills, slash commands, MCP integrations, and the Claude CLI.
+
+It turns a single Claude Code installation into a team of 9 specialized agents — each with its own domain, skills, persistent memory, and automated routines. The result is a production system that runs daily operations for a founder/CEO: from morning briefings to financial reports, community monitoring, social analytics, and end-of-day consolidation.
 
 **This is not a chatbot.** It is a real operating layer that runs routines, generates HTML reports, syncs meetings, triages emails, monitors community health, tracks financial metrics, and consolidates everything into a unified dashboard — all automated.
+
+### Why Claude Code?
+
+- **Native agent system** — agents are `.md` files with system prompts, not code
+- **Skills as instructions** — teach Claude new capabilities via markdown, not plugins
+- **MCP integrations** — first-class support for Google Calendar, Gmail, GitHub, Linear, Telegram, and more
+- **Slash commands** — `/ops`, `/finance`, `/community` invoke agents directly
+- **Persistent memory** — CLAUDE.md + per-agent memory survives across sessions
+- **CLI-first** — runs anywhere Claude Code runs (terminal, VS Code, JetBrains, web)
 
 ---
 
