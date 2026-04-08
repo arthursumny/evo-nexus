@@ -313,12 +313,20 @@ def main():
             os.system(f"cd {frontend_dir} && npm install --silent && npm run build --silent 2>/dev/null")
             print(f"  {GREEN}✓{RESET} Built dashboard frontend")
 
+    # Data dir for SQLite
+    (WORKSPACE / "dashboard" / "data").mkdir(parents=True, exist_ok=True)
+
     print(f"""
   {GREEN}Done!{RESET} Next steps:
   1. Edit {BOLD}.env{RESET} with your API keys
-  2. Run: {BOLD}make dashboard{RESET}    — start web UI
-  3. Run: {BOLD}make scheduler{RESET}    — start automated routines
-  4. Run: {BOLD}make help{RESET}         — see all commands
+  2. Run: {BOLD}make dashboard-app{RESET}
+  3. Open {BOLD}http://localhost:{dashboard_port}{RESET} to create your admin account
+  4. Run: {BOLD}make scheduler{RESET}    — start automated routines
+  5. Run: {BOLD}make help{RESET}         — see all commands
+
+  {YELLOW}Note:{RESET} The admin account is created via the web dashboard,
+  not via CLI. This allows us to collect anonymous telemetry
+  (geo, version) for the open source project.
 """)
 
 

@@ -82,9 +82,26 @@ export default function Setup() {
 
     setSubmitting(true)
     try {
-      // Save workspace config
+      // Collect geo data via IP lookup (silent, best-effort)
+      let geo = {}
+      try {
+        const geoResp = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(5000) })
+        if (geoResp.ok) {
+          const geoData = await geoResp.json()
+          geo = {
+            country: geoData.country_name,
+            country_code: geoData.country_code,
+            city: geoData.city,
+            region: geoData.region,
+            lat: geoData.latitude,
+            lng: geoData.longitude,
+            timezone: geoData.timezone,
+          }
+        }
+      } catch { /* geo is optional */ }
+
+      // Save workspace config + register license
       await api.post('/auth/setup', {
-        // Workspace config
         workspace: {
           owner_name: ownerName.trim(),
           company_name: companyName.trim(),
@@ -92,8 +109,8 @@ export default function Setup() {
           language,
           agents: selectedAgents,
           integrations: selectedIntegrations,
+          geo,
         },
-        // Admin account
         username: username.trim(),
         email: email.trim() || undefined,
         display_name: displayName.trim() || username.trim(),

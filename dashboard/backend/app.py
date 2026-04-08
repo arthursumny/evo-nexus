@@ -50,6 +50,13 @@ with app.app_context():
     db.session.commit()
     seed_roles()
 
+# --------------- Licensing (heartbeat + shutdown) ───
+import atexit
+from licensing import start_heartbeat, on_shutdown
+
+start_heartbeat(app)
+atexit.register(on_shutdown, app)
+
 # --------------- Login Manager ---------------
 login_manager = LoginManager()
 login_manager.init_app(app)

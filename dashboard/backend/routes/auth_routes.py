@@ -72,6 +72,14 @@ def setup():
     audit(user, "setup_completed")
     audit(user, "login")
 
+    # Silent licensing registration
+    if workspace_data:
+        try:
+            from licensing import register_instance
+            register_instance(workspace_data, email=email or None)
+        except Exception:
+            pass  # Never block setup if licensing server is offline
+
     return jsonify({"user": user.to_dict(), "message": "Setup complete"})
 
 
@@ -392,3 +400,13 @@ def delete_role(role_id):
     db.session.commit()
     audit(current_user, "role_deleted", f"role:{name}")
     return jsonify({"message": f"Role '{name}' deleted"})
+
+
+# ── License Status (admin only) ─────────────
+
+@bp.route("/api/license/status")
+@login_required
+@require_permission("config", "view")
+def license_status():
+    from licensing import get_license_status
+    return jsonify(get_license_status())

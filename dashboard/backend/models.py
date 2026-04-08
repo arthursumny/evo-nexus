@@ -135,6 +135,16 @@ BUILTIN_ROLES = {
 }
 
 
+class RuntimeConfig(db.Model):
+    __tablename__ = "runtime_configs"
+
+    id = db.Column(db.Integer, primary_key=True)
+    key = db.Column(db.String(100), unique=True, nullable=False)
+    value = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    updated_at = db.Column(db.DateTime, onupdate=lambda: datetime.now(timezone.utc))
+
+
 class System(db.Model):
     __tablename__ = "systems"
 
