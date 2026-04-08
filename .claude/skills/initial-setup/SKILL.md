@@ -1,163 +1,112 @@
 ---
 name: initial-setup
-description: "Guide new users through their first OpenClaude setup — from cloning to running their first agent. Triggers when the user says 'setup', 'get started', 'how do I start', 'first time', 'new install', 'help me set up', 'onboarding', or when the workspace appears to be unconfigured (no CLAUDE.md, no workspace.yaml). Also trigger when the user seems lost or asks 'what is this', 'how does this work', or 'what can you do'."
+description: "Welcome and onboard new OpenClaude users — introduce agents, skills, routines, and the dashboard. Triggers when the user says 'get started', 'how do I use this', 'what can you do', 'help me get started', 'onboarding', 'show me around', 'what agents do I have', 'how does this work', 'first time here', or seems unfamiliar with the workspace. Also trigger when the user opens Claude Code in an OpenClaude workspace for the first time."
 ---
 
-# OpenClaude — Initial Setup Guide
+# OpenClaude — Welcome & Onboarding
 
-You are guiding a new user through their first OpenClaude setup. Be friendly, clear, and step-by-step. Detect what's already done and skip completed steps automatically.
+The user already has OpenClaude installed and running. Your job is to welcome them, show what's available, and help them start using agents, skills, and routines right away.
 
-## Step 0: Detect Current State
+## Welcome
 
-Before anything, check what's already configured:
+Start with a warm welcome:
 
-```
-Check these files:
-- config/workspace.yaml → CLI setup done?
-- CLAUDE.md → workspace configured?
-- dashboard/data/openclaude.db → has users table with rows? (dashboard setup done)
-- .env → API keys configured?
-```
+"Welcome to **OpenClaude** — your AI-powered business operating system. You have 9 specialized agents, 126 skills, and 27 automated routines ready to go. Let me show you what you can do."
 
-Based on what exists, skip to the appropriate step. Tell the user what you found:
+## Your Agents
 
-**If nothing exists:** "Looks like this is a fresh install! Let's get you set up."
-**If workspace.yaml exists but no DB users:** "CLI setup is done. You just need to start the dashboard and create your admin account."
-**If everything exists:** "You're all set up! Let me show you around instead."
+"You have a team of 9 agents, each specialized in a business domain. Talk to them using slash commands:"
 
-## Step 1: Prerequisites
+| Command | Agent | What it does | Try saying... |
+|---------|-------|-------------|---------------|
+| `/ops` | **Operations** | Daily briefing, email triage, tasks, decisions, agenda | "good morning" or "what do I have today?" |
+| `/finance` | **Finance** | Stripe, ERP, cash flow, reports, monthly close | "financial pulse" or "how are the finances?" |
+| `/projects` | **Projects** | Linear, GitHub, sprints, milestones, blockers | "check linear" or "github review" |
+| `/community` | **Community** | Discord/WhatsApp pulse, FAQ, sentiment analysis | "community pulse" or "how's the community?" |
+| `/social` | **Social Media** | Content creation, analytics, posting calendar | "social analytics" or "write a post" |
+| `/strategy` | **Strategy** | OKRs, roadmap, competitive analysis, scenarios | "strategy digest" or "OKR review" |
+| `/sales` | **Sales** | Pipeline, proposals, lead qualification, follow-ups | "pipeline review" or "qualify this lead" |
+| `/courses` | **Courses** | Learning paths, modules, course creation | "create a course outline" |
+| `/personal` | **Personal** | Health tracking, habits, personal routine | "health check-in" |
 
-Check that required tools are installed:
+"You don't have to use slash commands — just describe what you need and I'll route to the right agent automatically."
 
-```bash
-claude --version    # Claude Code CLI
-uv --version        # Python package manager
-node --version      # Node.js
-npm --version       # npm
-```
+## Quick Wins to Try Right Now
 
-If any are missing, provide install instructions:
-- **Claude Code**: `npm install -g @anthropic-ai/claude-code` — https://claude.ai/download
-- **uv**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-- **Node.js**: https://nodejs.org
+Suggest 3 things the user can try immediately based on what's most useful:
 
-Do NOT proceed until all prerequisites are met.
+### 1. Morning Briefing
+"Say **'good morning'** and the Ops agent will check your calendar, emails, tasks, and give you a prioritized plan for the day."
 
-## Step 2: Run Setup Wizard
+### 2. Dashboard Overview
+"Open **http://localhost:8080** to see the web dashboard — overview metrics, reports, services, and even a Claude Code terminal in the browser."
 
-If `config/workspace.yaml` does not exist:
+### 3. Run a Routine
+"Try running a routine manually:
+- `make morning` — morning briefing
+- `make community` — community pulse report
+- `make fin-pulse` — financial snapshot
 
-Tell the user: "Let's run the setup wizard. It will ask for your name, company, timezone, and language."
+Each routine generates an HTML report you can view in the dashboard under Reports."
 
-```bash
-make setup
-```
+## Skills by Domain
 
-This will:
-- Check prerequisites
-- Ask basic info (name, company, timezone, language, port)
-- Install Python dependencies
-- Build the dashboard frontend
-- Create workspace folders
+"You have 126 skills organized by prefix. Here are the categories:"
 
-Wait for the user to confirm it completed successfully.
+| Prefix | Domain | Examples |
+|--------|--------|----------|
+| `fin-` | Financial | P&L, journal entries, reconciliation, SOX compliance, monthly close |
+| `social-` | Social Media | Post writer, carousel, thread, analytics, content strategy |
+| `mkt-` | Marketing | Campaigns, SEO audit, email sequences, competitive briefs |
+| `int-` | Integrations | Stripe, Omie, YouTube, Instagram, LinkedIn, Discord, Fathom |
+| `prod-` | Productivity | Morning briefing, end of day, memory management, dashboard |
+| `pulse-` | Community | Daily/weekly/monthly pulse reports, FAQ sync |
+| `sage-` | Strategy | OKR review, strategy digest, competitive analysis |
+| `gog-` | Google | Gmail triage, Calendar, email drafts, follow-ups |
+| `discord-` | Discord | Messages, channels, moderation |
+| `obs-` | Obsidian | Markdown, CLI, canvas, bases |
+| `evo-` | Development | PRD, architecture, sprints, code review, QA, brainstorming |
 
-## Step 3: Configure API Keys
+"Browse all skills in the dashboard under **Skills**, or just ask me to do something and I'll use the right skill."
 
-Check if `.env` has any real values (not just the template):
+## Automated Routines
 
-If `.env` is just the template, tell the user:
+"OpenClaude can run routines automatically on a schedule:"
 
-"Now edit `.env` with your API keys. You don't need all of them — just add the ones for services you use. The most common ones are:"
+**Daily:** Morning briefing, email triage, meeting sync, community pulse, financial pulse, end of day
+**Weekly:** Weekly review, strategy digest, trends analysis, financial weekly
+**Monthly:** Monthly close, community monthly report
 
-```
-DISCORD_BOT_TOKEN=      # For community monitoring
-STRIPE_SECRET_KEY=      # For financial routines
-TELEGRAM_BOT_TOKEN=     # For notifications
-```
+"Start the scheduler with `make scheduler` and routines run at their configured times. See them all with `make help`."
 
-"You can always add more later. For now, let's move on."
+## The Web Dashboard
 
-## Step 4: Start the Dashboard
+"Your dashboard at **http://localhost:8080** has:
 
-Tell the user:
+- **Overview** — all metrics at a glance
+- **Chat** — Claude Code terminal in the browser
+- **Reports** — HTML reports from routines
+- **Systems** — register and manage your apps
+- **Services** — start/stop scheduler, see live logs
+- **Routines** — metrics per routine + manual run button
+- **Integrations** — connect YouTube, Instagram, LinkedIn via OAuth
+- **Users & Roles** — manage access with custom permissions"
 
-"Let's start the web dashboard:"
+## What to Do Next
 
-```bash
-make dashboard-app
-```
+Based on the user's role/interest, suggest next steps:
 
-"Open **http://localhost:8080** in your browser. You'll see the setup wizard to create your admin account."
+- **CEO/Founder**: "Try `/ops` with 'good morning' to get your daily briefing, then `/strategy` for the strategy digest"
+- **Developer**: "Try `/projects` to check GitHub and Linear, or browse the `evo-` skills for PRDs, architecture, and code review"
+- **Marketing**: "Try `/social` to write a post or create a content calendar, or `/community` for the community pulse"
+- **Finance**: "Try `/finance` for the financial pulse, or run `make fin-pulse` for a full report"
 
-Guide them through:
-1. Enter username, email, display name
-2. Set a password (min 6 characters)
-3. Click "Create Admin & Start"
-
-The license activates automatically in the background — no action needed from the user.
-
-## Step 5: Tour the Dashboard
-
-Once logged in, give a quick tour:
-
-"Your dashboard is ready! Here's what you can do:
-
-- **Overview** — see metrics from all agents at a glance
-- **Chat** — open a Claude Code terminal right in the browser
-- **Systems** — register and manage your apps/services
-- **Reports** — browse HTML reports generated by routines
-- **Services** — start/stop the scheduler and Telegram bot
-- **Routines** — see metrics per routine and run them manually
-- **Users** — manage users and roles
-- **Roles** — customize permissions per role"
-
-## Step 6: Meet Your Agents
-
-Introduce the agents:
-
-"You have 9 specialized agents. Use slash commands to invoke them:
-
-| Command | Agent | What it does |
-|---------|-------|-------------|
-| `/ops` | Operations | Daily briefing, email triage, tasks, decisions |
-| `/finance` | Finance | Stripe, ERP, cash flow, monthly close |
-| `/projects` | Projects | Linear, GitHub, sprints, milestones |
-| `/community` | Community | Discord pulse, FAQ sync, sentiment |
-| `/social` | Social | Content creation, analytics, calendar |
-| `/strategy` | Strategy | OKRs, roadmap, competitive analysis |
-| `/sales` | Sales | Pipeline, proposals, lead qualification |
-| `/courses` | Courses | Learning paths, modules, content |
-| `/personal` | Personal | Health, habits, routine tracking |
-
-Try one now! For example, say: **'good morning'** and the Ops agent will brief you on your day."
-
-## Step 7: Start Automated Routines (Optional)
-
-"Want your routines to run automatically? Start the scheduler:"
-
-```bash
-make scheduler
-```
-
-"This runs routines on schedule — morning briefing at 7am, community pulse at 8pm, financial reports weekly, etc. See `ROUTINES.md` for the full schedule."
-
-## Step 8: What's Next
-
-"You're all set! Here are some things to try:
-
-1. **Run a routine manually**: `make morning` (morning briefing) or `make community` (community pulse)
-2. **Browse skills**: Check the Skills page in the dashboard — you have 126 skills
-3. **Register a system**: Go to Systems and add your apps (Docker containers, external URLs)
-4. **Connect social media**: Go to Integrations in the dashboard to connect YouTube, Instagram, LinkedIn via OAuth
-5. **Run `make help`** to see all available commands
-
-Questions? Just ask — I'm here to help!"
+"Just tell me what you're working on and I'll help you get started with the right agent!"
 
 ## Tone
 
-- Be encouraging and patient — this might be someone's first time with Claude Code
-- Use simple language, avoid jargon
-- Celebrate small wins ("Great, that's done!")
-- If something fails, help debug step by step
-- Skip steps that are already complete — don't make the user redo work
+- Enthusiastic but not overwhelming — show value quickly
+- Let the user explore at their own pace
+- Suggest concrete actions, not abstract descriptions
+- If they seem experienced, be concise; if new, be more detailed
+- Always end with an invitation to try something: "Want to try one of these now?"
