@@ -15,7 +15,7 @@ import datetime as _dt
 import re
 from pathlib import Path
 from flask import Blueprint, request as flask_request
-from flask_login import login_required
+from flask_login import current_user, login_required
 from flask_sock import Sock
 from routes._helpers import WORKSPACE
 
@@ -221,6 +221,11 @@ def init_websocket(app):
     @sock.route("/ws/terminal/<session_id>")
     def terminal_ws(ws, session_id):
         """WebSocket handler for terminal I/O."""
+        # WebSocket routes bypass before_request, so check auth here
+        if not current_user.is_authenticated:
+            ws.send(json.dumps({"error": "Authentication required"}))
+            return
+
         info = sessions.get(session_id)
         if not info:
             ws.send(json.dumps({"error": "Session not found"}))

@@ -179,6 +179,11 @@ def add_source():
     if not resolved.is_dir():
         return jsonify({"error": f"Directory not found: {path}"}), 400
 
+    # Block paths outside home directory or workspace
+    home = Path.home().resolve()
+    if not (str(resolved).startswith(str(home)) or str(resolved).startswith(str(WORKSPACE.resolve()))):
+        return jsonify({"error": "Source path must be within home directory or workspace"}), 400
+
     sources = _load_sources()
 
     # Check for duplicate
@@ -232,15 +237,19 @@ def mine():
     else:
         targets = sources
 
-    # Build mining script
+    # Build mining script using repr() to safely escape all values
     palace_path = str(PALACE_DIR)
     mine_calls = []
     for t in targets:
         wing = t.get("wing") or ""
-        wing_arg = f", wing_override='{wing}'" if wing else ""
-        mine_calls.append(
-            f"mine('{t['path']}', '{palace_path}'{wing_arg})"
-        )
+        if wing:
+            mine_calls.append(
+                f"mine({repr(t['path'])}, {repr(palace_path)}, wing_override={repr(wing)})"
+            )
+        else:
+            mine_calls.append(
+                f"mine({repr(t['path'])}, {repr(palace_path)})"
+            )
 
     script = (
         "from mempalace.miner import mine\n"

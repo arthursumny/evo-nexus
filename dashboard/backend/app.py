@@ -91,7 +91,7 @@ def auth_middleware():
     if not path.startswith("/api/") and not path.startswith("/ws/"):
         return None
 
-    # WebSocket — skip (handled separately)
+    # WebSocket — auth checked inside the handler
     if path.startswith("/ws/"):
         return None
 
