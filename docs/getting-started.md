@@ -1,4 +1,4 @@
-# Getting Started with OpenClaude
+# Getting Started with EvoNexus
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@
 ### 1. Quick Install (recommended)
 
 ```bash
-npx @evoapi/open-claude
+npx @evoapi/evo-nexus
 ```
 
 This downloads and runs the interactive setup wizard automatically.
@@ -20,8 +20,8 @@ This downloads and runs the interactive setup wizard automatically.
 ### Alternative: Manual Clone
 
 ```bash
-git clone https://github.com/EvolutionAPI/open-claude.git
-cd open-claude
+git clone https://github.com/EvolutionAPI/evo-nexus.git
+cd evo-nexus
 
 # Interactive setup wizard
 make setup

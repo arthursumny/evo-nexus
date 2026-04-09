@@ -1,4 +1,4 @@
-"""SQLAlchemy models for OpenClaude dashboard."""
+"""SQLAlchemy models for EvoNexus dashboard."""
 
 import json
 import secrets

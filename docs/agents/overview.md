@@ -1,6 +1,6 @@
 # Agents Overview
 
-Agents are the core of OpenClaude. Each agent is a specialized AI persona with its own domain, system prompt, skills, and persistent memory.
+Agents are the core of EvoNexus. Each agent is a specialized AI persona with its own domain, system prompt, skills, and persistent memory.
 
 ## What Is an Agent?
 
@@ -136,7 +136,7 @@ To create a custom agent, use the `create-agent` skill or see [Creating Agents](
 
 **Kai** is the personal assistant with an isolated domain. Health tracking, habits, personal appointments, and routines. It does not handle professional matters.
 
-**Oracle** is the workspace knowledge agent. It answers questions about how OpenClaude works — agents, skills, routines, integrations, dashboard, configuration, and architecture — by reading the actual documentation before responding. No RAG or vector DB needed.
+**Oracle** is the workspace knowledge agent. It answers questions about how EvoNexus works — agents, skills, routines, integrations, dashboard, configuration, and architecture — by reading the actual documentation before responding. No RAG or vector DB needed.
 
 **Mako** handles marketing. Campaign planning, content creation, brand reviews, SEO audits, email sequences, and performance reports.
 

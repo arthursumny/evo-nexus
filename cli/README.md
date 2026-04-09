@@ -1,17 +1,17 @@
-# @evoapicloud/open-claude
+# @evoapi/evo-nexus
 
 Unofficial open source toolkit for Claude Code — AI-powered business operating system.
 
 ## Quick Start
 
 ```bash
-npx @evoapicloud/open-claude
+npx @evoapi/evo-nexus
 ```
 
 This will:
 
 1. Check prerequisites (git, Claude Code, Node.js, Python)
-2. Clone the [OpenClaude](https://github.com/EvolutionAPI/open-claude) repository
+2. Clone the [EvoNexus](https://github.com/EvolutionAPI/evo-nexus) repository
 3. Install Python and Node.js dependencies
 4. Run the interactive setup wizard
 5. Build the dashboard frontend
@@ -19,14 +19,14 @@ This will:
 ## Usage
 
 ```bash
-# Install in default directory (open-claude/)
-npx @evoapicloud/open-claude
+# Install in default directory (evonexus/)
+npx @evoapi/evo-nexus
 
 # Install in a custom directory
-npx @evoapicloud/open-claude my-workspace
+npx @evoapi/evo-nexus my-workspace
 
 # Show help
-npx @evoapicloud/open-claude --help
+npx @evoapi/evo-nexus --help
 ```
 
 ## Prerequisites
@@ -39,12 +39,12 @@ npx @evoapicloud/open-claude --help
 
 ## Links
 
-- **Site:** https://openclaude.evolutionfoundation.com.br
-- **Docs:** https://openclaude.evolutionfoundation.com.br/docs
-- **GitHub:** https://github.com/EvolutionAPI/open-claude
+- **Site:** https://evonexus.evolutionfoundation.com.br
+- **Docs:** https://evonexus.evolutionfoundation.com.br/docs
+- **GitHub:** https://github.com/EvolutionAPI/evo-nexus
 
 ## License
 
 MIT — [Evolution Foundation](https://evolutionfoundation.com.br)
 
-> **Disclaimer:** OpenClaude is an independent, unofficial open-source project. It is not affiliated with, endorsed by, or sponsored by Anthropic. "Claude" and "Claude Code" are trademarks of Anthropic, PBC.
+> **Disclaimer:** EvoNexus is an independent, unofficial open-source project. It is not affiliated with, endorsed by, or sponsored by Anthropic. "Claude" and "Claude Code" are trademarks of Anthropic, PBC.

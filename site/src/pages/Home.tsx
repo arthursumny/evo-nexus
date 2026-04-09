@@ -58,12 +58,12 @@ export default function Home() {
   }, [lightboxImg]);
 
   const copyCode = useCallback(() => {
-    navigator.clipboard.writeText(`npx @evoapi/open-claude`);
+    navigator.clipboard.writeText(`npx @evoapi/evo-nexus`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }, []);
 
-  const GITHUB_URL = "https://github.com/EvolutionAPI/open-claude";
+  const GITHUB_URL = "https://github.com/EvolutionAPI/evo-nexus";
   const DOCS_URL = "/docs";
 
   const scrollTo = (id: string) => {
@@ -121,8 +121,8 @@ export default function Home() {
           </div>
 
           <div className="flex items-center text-xl font-bold tracking-tight font-mono">
-            <span className="text-primary">Open</span>
-            <span className="text-foreground">Claude</span>
+            <span className="text-primary">Evo</span>
+            <span className="text-foreground">Nexus</span>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
@@ -223,7 +223,7 @@ export default function Home() {
                 <div className="mx-auto text-xs text-muted-foreground font-mono">bash</div>
               </div>
               <div className="p-6 pt-12 font-mono text-sm leading-relaxed text-gray-300">
-                <div className="flex gap-2"><span className="text-primary">$</span> <span>npx @evoapi/open-claude</span></div>
+                <div className="flex gap-2"><span className="text-primary">$</span> <span>npx @evoapi/evo-nexus</span></div>
                 <div className="text-emerald-400 mt-2">&#10003; Claude Code CLI detected</div>
                 <div className="text-emerald-400">&#10003; Dependencies installed</div>
                 <div className="text-emerald-400">&#10003; Dashboard built</div>
@@ -273,7 +273,7 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything included. Zero lock-in.</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">OpenClaude comes with a complete suite of tools out of the box.</p>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">EvoNexus comes with a complete suite of tools out of the box.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -306,7 +306,7 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Claude Code?</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">OpenClaude is an unofficial toolkit that integrates with Claude Code — not just another wrapper. Here's what makes it different.</p>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">EvoNexus is an unofficial toolkit that integrates with Claude Code — not just another wrapper. Here's what makes it different.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -341,7 +341,7 @@ export default function Home() {
               <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-border z-0"></div>
 
               {[
-                { step: 1, title: "Install", code: "npx @evoapi/open-claude", desc: "CLI wizard configures everything" },
+                { step: 1, title: "Install", code: "npx @evoapi/evo-nexus", desc: "CLI wizard configures everything" },
                 { step: 2, title: "Start Dashboard", code: "make dashboard-app", desc: "Web UI with admin setup, scheduler included" },
                 { step: 3, title: "Use Your Agents", code: "Say 'good morning'", desc: "Your AI team takes over your routines" },
               ].map((item, i) => (
@@ -436,13 +436,13 @@ export default function Home() {
             <div className="relative bg-card/50 border border-border rounded-2xl p-8 md:p-12">
               <div className="absolute -top-6 left-8 text-8xl text-primary/20 font-serif leading-none select-none">&ldquo;</div>
               <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center relative z-10 mb-8">
-                Evolution Foundation runs their entire operation on OpenClaude — from morning briefings to monthly financial close, community monitoring across 17,000+ developers, and social media analytics.
+                Evolution Foundation runs their entire operation on EvoNexus — from morning briefings to monthly financial close, community monitoring across 17,000+ developers, and social media analytics.
               </blockquote>
               <div className="flex items-center justify-center gap-4">
                 <img src={MainLogo} alt="Evolution Foundation" className="h-10" />
                 <div className="text-left">
                   <div className="font-bold">Evolution Foundation</div>
-                  <div className="text-sm text-primary">Creators of OpenClaude</div>
+                  <div className="text-sm text-primary">Creators of EvoNexus</div>
                 </div>
               </div>
             </div>
@@ -476,7 +476,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="p-6 md:p-8 font-mono text-base md:text-lg leading-loose">
-                <div className="flex gap-3"><span className="text-primary select-none">$</span> <span className="text-gray-300"><span className="text-blue-400">npx</span> @evoapi/open-claude</span></div>
+                <div className="flex gap-3"><span className="text-primary select-none">$</span> <span className="text-gray-300"><span className="text-blue-400">npx</span> @evoapi/evo-nexus</span></div>
                 <div className="mt-4 text-muted-foreground text-sm"># Or manually: git clone + make setup + make dashboard-app</div>
               </div>
             </div>

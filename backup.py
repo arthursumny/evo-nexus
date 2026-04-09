@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenClaude — Workspace Backup & Restore
+EvoNexus — Workspace Backup & Restore
 Export/import all gitignored user data (memory, config, logs, customizations).
 Usage: python backup.py backup [--target local|s3] [--s3-bucket BUCKET]
        python backup.py restore <file> [--mode merge|replace]
@@ -89,10 +89,10 @@ def _get_workspace_name() -> str:
         try:
             import yaml
             config = yaml.safe_load(config_file.read_text())
-            return config.get("name", "OpenClaude Workspace")
+            return config.get("name", "EvoNexus Workspace")
         except Exception:
             pass
-    return "OpenClaude Workspace"
+    return "EvoNexus Workspace"
 
 
 def _should_exclude(rel_path: str) -> bool:
@@ -163,7 +163,7 @@ def backup_local(s3_upload: bool = False, s3_bucket: str = None) -> Path:
 
     BACKUPS_DIR.mkdir(exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    zip_name = f"openclaude-backup-{timestamp}.zip"
+    zip_name = f"evonexus-backup-{timestamp}.zip"
     zip_path = BACKUPS_DIR / zip_name
 
     # Build manifest
@@ -330,7 +330,7 @@ def _get_s3_config(s3_bucket: str = None) -> tuple[str, str]:
     if not bucket:
         print(f"{RED}S3 bucket not configured. Set BACKUP_S3_BUCKET env var or use --s3-bucket.{RESET}")
         sys.exit(1)
-    prefix = os.environ.get("BACKUP_S3_PREFIX", "openclaude-backups/")
+    prefix = os.environ.get("BACKUP_S3_PREFIX", "evonexus-backups/")
     if not prefix.endswith("/"):
         prefix += "/"
     return bucket, prefix
@@ -403,7 +403,7 @@ def list_backups(target: str = "local", s3_bucket: str = None):
         if not BACKUPS_DIR.exists():
             print(f"  {YELLOW}No backups directory found.{RESET}")
             return
-        zips = sorted(BACKUPS_DIR.glob("openclaude-backup-*.zip"), reverse=True)
+        zips = sorted(BACKUPS_DIR.glob("evonexus-backup-*.zip"), reverse=True)
         if not zips:
             print(f"  {YELLOW}No local backups found.{RESET}")
             return
@@ -463,13 +463,13 @@ def list_backups(target: str = "local", s3_bucket: str = None):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="OpenClaude — Workspace Backup & Restore",
+        description="EvoNexus — Workspace Backup & Restore",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   python backup.py backup                  # Local backup
   python backup.py backup --target s3      # Local + S3 upload
-  python backup.py restore backups/openclaude-backup-20260409-120000.zip
+  python backup.py restore backups/evonexus-backup-20260409-120000.zip
   python backup.py restore backups/latest.zip --mode replace
   python backup.py restore --target s3     # Restore latest from S3
   python backup.py list                    # List local backups

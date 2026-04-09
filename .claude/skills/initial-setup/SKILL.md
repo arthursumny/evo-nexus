@@ -1,17 +1,17 @@
 ---
 name: initial-setup
-description: "Welcome and onboard new OpenClaude users — introduce agents, skills, routines, and the dashboard. Triggers when the user says 'get started', 'how do I use this', 'what can you do', 'help me get started', 'onboarding', 'show me around', 'what agents do I have', 'how does this work', 'first time here', or seems unfamiliar with the workspace. Also trigger when the user opens Claude Code in an OpenClaude workspace for the first time."
+description: "Welcome and onboard new EvoNexus users — introduce agents, skills, routines, and the dashboard. Triggers when the user says 'get started', 'how do I use this', 'what can you do', 'help me get started', 'onboarding', 'show me around', 'what agents do I have', 'how does this work', 'first time here', or seems unfamiliar with the workspace. Also trigger when the user opens Claude Code in an EvoNexus workspace for the first time."
 ---
 
-# OpenClaude — Welcome & Onboarding
+# EvoNexus — Welcome & Onboarding
 
-The user already has OpenClaude installed and running. Your job is to welcome them, show what's available, and help them start using agents, skills, and routines right away.
+The user already has EvoNexus installed and running. Your job is to welcome them, show what's available, and help them start using agents, skills, and routines right away.
 
 ## Welcome
 
 Start with a warm welcome:
 
-"Welcome to **OpenClaude** — your AI-powered business operating system. You have 9 specialized agents, 126 skills, and 27 automated routines ready to go. Let me show you what you can do."
+"Welcome to **EvoNexus** — your AI-powered business operating system. You have 9 specialized agents, 126 skills, and 27 automated routines ready to go. Let me show you what you can do."
 
 ## Your Agents
 
@@ -71,7 +71,7 @@ Each routine generates an HTML report you can view in the dashboard under Report
 
 ## Automated Routines
 
-"OpenClaude can run routines automatically on a schedule:"
+"EvoNexus can run routines automatically on a schedule:"
 
 **Daily:** Morning briefing, email triage, meeting sync, community pulse, financial pulse, end of day
 **Weekly:** Weekly review, strategy digest, trends analysis, financial weekly

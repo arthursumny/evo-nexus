@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.1] - 2026-04-09
+
+### Changed
+- **Rebrand OpenClaude → EvoNexus** — full platform rename across ~80 files: docs, dashboard, CLI, site, templates, skills, agents, Docker, env vars (`OPENCLAUDE_PORT` → `EVONEXUS_PORT`), npm package (`@evoapi/evo-nexus`), GitHub repo (`EvolutionAPI/evo-nexus`), cover SVG, and all internal references.
+
 ## [0.11.0] - 2026-04-09
 
 ### Added
@@ -128,13 +133,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **Docs markdown rendering** — replaced regex parser with `marked` library. Code blocks, ASCII art, and nested formatting now render correctly on the site.
-- **README and site** — `npx @evoapi/open-claude` is now the primary install method. Git clone shown as alternative.
+- **README and site** — `npx @evoapi/evo-nexus` is now the primary install method. Git clone shown as alternative.
 - **Release skill** — `make docs-build` and frontend rebuild are now mandatory on every release (not conditional).
 
 ### Fixed
 - **Site /docs navigation** — nested doc pages (e.g., `/docs/guides/creating-routines`) no longer 404. Switched from `useRoute` wildcard to direct URL parsing.
 - **Site route matching** — changed from `/docs/:slug+` to `/docs/*` for reliable wouter matching.
-- **CLI default directory** — `npx @evoapi/open-claude` without args now clones into current directory (`.`), not a subfolder.
+- **CLI default directory** — `npx @evoapi/evo-nexus` without args now clones into current directory (`.`), not a subfolder.
 - **Site CI build** — added missing `print-agents.png` to site assets.
 - **Docs sync** — site now serves updated docs matching the repo (was stale).
 
@@ -159,7 +164,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Docker Compose for dashboard** — `Dockerfile.dashboard` (multi-stage: node + python) + `docker-compose.yml` with dashboard, telegram, and runner services. `make docker-dashboard` to start.
-- **Dashboard CI** — GitHub Actions workflow builds and pushes dashboard image to `ghcr.io/evolutionapi/open-claude/dashboard` on push/release
+- **Dashboard CI** — GitHub Actions workflow builds and pushes dashboard image to `ghcr.io/evolutionapi/evo-nexus/dashboard` on push/release
 - **npm CI** — GitHub Actions workflow publishes CLI to npm on release (requires `NPM_TOKEN` secret)
 
 ### Changed
@@ -171,7 +176,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.4.0] - 2026-04-09
 
 ### Added
-- **CLI installer** — `npx @evoapi/open-claude` clones repo, checks prerequisites, installs deps, runs setup wizard, and builds dashboard
+- **CLI installer** — `npx @evoapi/evo-nexus` clones repo, checks prerequisites, installs deps, runs setup wizard, and builds dashboard
 - **Version indicator in dashboard** — sidebar footer shows current version; `/api/version/check` compares against latest GitHub release with 1h cache
 - **Public roadmap** — `ROADMAP.md` with 4 phases (v0.4 → Future), community input via GitHub discussions
 - **Update guide** — `docs/guides/updating.md` with git pull, Docker, and custom content preservation instructions
@@ -203,7 +208,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Landing page** (`site/`) — standalone React + Vite static site, extracted from Replit monorepo
 - **Docker support for site** — multi-stage Dockerfile (node build → nginx serve) + docker-compose
-- **GitHub Actions CI** — workflow builds site image and pushes to `ghcr.io/evolutionapi/open-claude/site` on push/release
+- **GitHub Actions CI** — workflow builds site image and pushes to `ghcr.io/evolutionapi/evo-nexus/site` on push/release
 - **Docs bundled in site image** — `docs/` copied into site build context automatically
 
 ### Changed

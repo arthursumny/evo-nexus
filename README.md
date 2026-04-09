@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="public/cover.svg" alt="OpenClaude" width="100%"/>
+  <img src="public/cover.svg" alt="EvoNexus" width="100%"/>
 </p>
 
 <p align="center">
@@ -19,13 +19,13 @@
 
 ---
 
-> **Disclaimer:** OpenClaude is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
+> **Disclaimer:** EvoNexus is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
 
 ---
 
 ## What It Is
 
-OpenClaude is an open source, **unofficial** toolkit compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It is designed to integrate with Claude Code capabilities: native agents, skills, slash commands, MCP integrations, and the Claude CLI.
+EvoNexus is an open source, **unofficial** toolkit compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It is designed to integrate with Claude Code capabilities: native agents, skills, slash commands, MCP integrations, and the Claude CLI.
 
 It turns a single Claude Code installation into a team of 16 specialized agents — each with its own domain, skills, persistent memory, and automated routines. The result is a production system that runs daily operations for a founder/CEO: from morning briefings to financial reports, community monitoring, social analytics, and end-of-day consolidation.
 
@@ -117,7 +117,7 @@ The setup wizard (`make setup`) checks for all prerequisites before proceeding.
 ### Method 1 — One command (recommended)
 
 ```bash
-npx @evoapi/open-claude
+npx @evoapi/evo-nexus
 ```
 
 This downloads and runs the interactive setup wizard automatically.
@@ -125,8 +125,8 @@ This downloads and runs the interactive setup wizard automatically.
 ### Method 2 — Manual clone
 
 ```bash
-git clone https://github.com/EvolutionAPI/open-claude.git
-cd open-claude
+git clone https://github.com/EvolutionAPI/evo-nexus.git
+cd evo-nexus
 
 # Interactive setup wizard — checks prerequisites, creates config files
 make setup
@@ -282,7 +282,7 @@ Each agent has:
 ## Workspace Structure
 
 ```
-open-claude/
+evo-nexus/
 ├── .claude/
 │   ├── agents/          — 16 agent system prompts
 │   ├── commands/        — 16 slash commands

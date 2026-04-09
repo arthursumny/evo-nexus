@@ -2,7 +2,7 @@
 
 ## Overview
 
-OpenClaude includes a lightweight, privacy-first licensing system. On first setup, your instance registers once with Evolution Foundation's server. That's it — no heartbeats, no monitoring, no periodic pings.
+EvoNexus includes a lightweight, privacy-first licensing system. On first setup, your instance registers once with Evolution Foundation's server. That's it — no heartbeats, no monitoring, no periodic pings.
 
 ## How It Works
 
@@ -19,7 +19,7 @@ The registration creates a unique `instance_id` for your installation based on y
 | `instance_id` | Unique identifier for this installation (SHA-256 hash of hostname + MAC) |
 | `email` | Admin email (from setup) |
 | `name` | Admin name (from setup) |
-| `version` | OpenClaude version |
+| `version` | EvoNexus version |
 | `geo` | Approximate location (country/city from IP, at registration time) |
 
 ### What It Does NOT Do
@@ -32,7 +32,7 @@ The registration creates a unique `instance_id` for your installation based on y
 
 ## Free Tier
 
-OpenClaude ships with a free tier that has no limitations. All agents, skills, routines, and dashboard features are available without paying anything.
+EvoNexus ships with a free tier that has no limitations. All agents, skills, routines, and dashboard features are available without paying anything.
 
 The registration exists solely to help Evolution Foundation understand adoption — how many instances exist and where — which informs development priorities.
 

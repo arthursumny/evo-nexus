@@ -37,7 +37,7 @@ The `obs-obsidian-cli` skill provides vault interaction:
 
 ## Related Skills
 
-OpenClaude includes several Obsidian-specific skills:
+EvoNexus includes several Obsidian-specific skills:
 
 | Skill | What it does |
 |---|---|

@@ -1,4 +1,4 @@
-# OpenClaude Documentation
+# EvoNexus Documentation
 
 Complete reference.
 
@@ -737,7 +737,7 @@ Persistent memory at `.claude/agent-memory/nova/`. Stores project context, user 
 
 **Command:** `/oracle` | **Color:** amber | **Model:** Sonnet
 
-Oracle is the workspace knowledge agent — it answers questions about OpenClaude itself. Agents, skills, routines, integrations, the dashboard, configuration, and architecture are all in its domain. Oracle reads documentation before answering and never guesses. If it does not find the answer in the docs, it says so.
+Oracle is the workspace knowledge agent — it answers questions about EvoNexus itself. Agents, skills, routines, integrations, the dashboard, configuration, and architecture are all in its domain. Oracle reads documentation before answering and never guesses. If it does not find the answer in the docs, it says so.
 
 ## When to Use
 
@@ -777,7 +777,7 @@ Oracle has no persistent agent memory. It reads documentation on every invocatio
 
 # Agents Overview
 
-Agents are the core of OpenClaude. Each agent is a specialized AI persona with its own domain, system prompt, skills, and persistent memory.
+Agents are the core of EvoNexus. Each agent is a specialized AI persona with its own domain, system prompt, skills, and persistent memory.
 
 ## What Is an Agent?
 
@@ -913,7 +913,7 @@ To create a custom agent, use the `create-agent` skill or see [Creating Agents](
 
 **Kai** is the personal assistant with an isolated domain. Health tracking, habits, personal appointments, and routines. It does not handle professional matters.
 
-**Oracle** is the workspace knowledge agent. It answers questions about how OpenClaude works — agents, skills, routines, integrations, dashboard, configuration, and architecture — by reading the actual documentation before responding. No RAG or vector DB needed.
+**Oracle** is the workspace knowledge agent. It answers questions about how EvoNexus works — agents, skills, routines, integrations, dashboard, configuration, and architecture — by reading the actual documentation before responding. No RAG or vector DB needed.
 
 **Mako** handles marketing. Campaign planning, content creation, brand reviews, SEO audits, email sequences, and performance reports.
 
@@ -1165,7 +1165,7 @@ Persistent memory at `.claude/agent-memory/zara/`. Stores project context, user 
 
 ## Overview
 
-OpenClaude is a file-based, git-friendly framework. Everything is markdown, YAML, and Python scripts. No database required for the core framework (SQLite is used only by the dashboard).
+EvoNexus is a file-based, git-friendly framework. Everything is markdown, YAML, and Python scripts. No database required for the core framework (SQLite is used only by the dashboard).
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -1483,7 +1483,7 @@ This enables Claude to query your knowledge base directly during conversations.
 
 # Dashboard Overview
 
-The OpenClaude web dashboard is a React + Flask application that gives you a visual interface to manage agents, routines, integrations, memory, and more.
+The EvoNexus web dashboard is a React + Flask application that gives you a visual interface to manage agents, routines, integrations, memory, and more.
 
 ## Starting the Dashboard
 
@@ -1505,7 +1505,7 @@ dashboard:
 Or via environment variable:
 
 ```bash
-OPENCLAUDE_PORT=9090 make dashboard-app
+EVONEXUS_PORT=9090 make dashboard-app
 ```
 
 ## First Run Setup
@@ -1673,7 +1673,7 @@ View and edit workspace configuration:
 
 # Users and Roles
 
-OpenClaude uses a role-based access control (RBAC) system. Every user has exactly one role, and each role defines what resources the user can access and what actions they can perform.
+EvoNexus uses a role-based access control (RBAC) system. Every user has exactly one role, and each role defines what resources the user can access and what actions they can perform.
 
 ## Default Roles
 
@@ -1801,7 +1801,7 @@ View the full audit log at **Audit Log** in the sidebar (requires `audit:view`).
 
 ---
 
-# Getting Started with OpenClaude
+# Getting Started with EvoNexus
 
 ## Prerequisites
 
@@ -1815,7 +1815,7 @@ View the full audit log at **Audit Log** in the sidebar (requires `audit:view`).
 ### 1. Quick Install (recommended)
 
 ```bash
-npx @evoapi/open-claude
+npx @evoapi/evo-nexus
 ```
 
 This downloads and runs the interactive setup wizard automatically.
@@ -1823,8 +1823,8 @@ This downloads and runs the interactive setup wizard automatically.
 ### Alternative: Manual Clone
 
 ```bash
-git clone https://github.com/EvolutionAPI/open-claude.git
-cd open-claude
+git clone https://github.com/EvolutionAPI/evo-nexus.git
+cd evo-nexus
 
 # Interactive setup wizard
 make setup
@@ -2669,7 +2669,7 @@ If you need to run something **once** at a specific time (not recurring), use [S
 
 # Creating Skills
 
-Skills are reusable instruction sets that teach Claude how to perform specific tasks. OpenClaude includes 126 built-in skills — you can create your own.
+Skills are reusable instruction sets that teach Claude how to perform specific tasks. EvoNexus includes 126 built-in skills — you can create your own.
 
 ## Using the Skill Creator
 
@@ -2806,7 +2806,7 @@ Claude matches your intent to the skill description and follows the instructions
 
 # Daily Workflow
 
-A practical guide to running your business day with OpenClaude — from morning briefing to end-of-day wrap-up.
+A practical guide to running your business day with EvoNexus — from morning briefing to end-of-day wrap-up.
 
 ## Morning (7:00 - 8:00)
 
@@ -3004,7 +3004,7 @@ See [Creating Routines](creating-routines.md) for details on the schedule and cu
 
 # Initial Setup and Onboarding
 
-The `initial-setup` skill gives you a guided tour of OpenClaude when you first start using it.
+The `initial-setup` skill gives you a guided tour of EvoNexus when you first start using it.
 
 ## How to Trigger
 
@@ -3085,7 +3085,7 @@ You can trigger the setup tour again anytime — just say "show me around" or "o
 
 ---
 
-# Updating OpenClaude
+# Updating EvoNexus
 
 ## Check your current version
 
@@ -3124,7 +3124,7 @@ python app.py &
 
 ## Update via Docker
 
-If you're running OpenClaude with Docker Compose:
+If you're running EvoNexus with Docker Compose:
 
 ```bash
 cd /path/to/your/workspace
@@ -3173,7 +3173,7 @@ Returns:
   "current": "0.3.2",
   "latest": "0.4.0",
   "update_available": true,
-  "release_url": "https://github.com/EvolutionAPI/open-claude/releases/tag/v0.4.0",
+  "release_url": "https://github.com/EvolutionAPI/evo-nexus/releases/tag/v0.4.0",
   "release_notes": "..."
 }
 ```
@@ -3181,14 +3181,14 @@ Returns:
 ## Changelog
 
 See all releases and changelogs on GitHub:
-https://github.com/EvolutionAPI/open-claude/releases
+https://github.com/EvolutionAPI/evo-nexus/releases
 
 
 ---
 
 # Using Agents
 
-OpenClaude ships with 16 specialized agents, each owning a specific domain. You don't need to memorize commands — just describe what you need and Claude routes to the right agent.
+EvoNexus ships with 16 specialized agents, each owning a specific domain. You don't need to memorize commands — just describe what you need and Claude routes to the right agent.
 
 ## Getting Started
 
@@ -3306,7 +3306,7 @@ Discord integration enables community monitoring, message retrieval, channel man
 ### 1. Create a Discord Bot
 
 1. Go to [discord.com/developers/applications](https://discord.com/developers/applications)
-2. Click **New Application**, give it a name (e.g., "OpenClaude Bot")
+2. Click **New Application**, give it a name (e.g., "EvoNexus Bot")
 3. Go to **Bot** in the sidebar
 4. Click **Reset Token** and copy the token -- you will need this
 
@@ -3410,7 +3410,7 @@ integrations:
 
 # Evo CRM Integration
 
-Evo CRM integration connects OpenClaude to the AI-powered CRM platform for managing contacts, conversations, pipelines, and labels.
+Evo CRM integration connects EvoNexus to the AI-powered CRM platform for managing contacts, conversations, pipelines, and labels.
 
 ## Setup
 
@@ -4260,7 +4260,7 @@ The `obs-obsidian-cli` skill provides vault interaction:
 
 ## Related Skills
 
-OpenClaude includes several Obsidian-specific skills:
+EvoNexus includes several Obsidian-specific skills:
 
 | Skill | What it does |
 |---|---|
@@ -4349,7 +4349,7 @@ Omie can send real-time events via webhooks. Supported events include order crea
 
 # Integrations Overview
 
-OpenClaude connects to external services through three mechanisms: **MCP servers**, **API clients**, and **OAuth flows**. Each integration provides data to one or more agents and routines.
+EvoNexus connects to external services through three mechanisms: **MCP servers**, **API clients**, and **OAuth flows**. Each integration provides data to one or more agents and routines.
 
 ![Integrations overview](../imgs/doc-integrations.png)
 
@@ -4570,7 +4570,7 @@ The Stripe integration provides data for these metrics:
 
 ## Stripe + Omie
 
-For a complete financial picture, OpenClaude combines Stripe data (revenue, subscriptions) with Omie ERP data (expenses, invoices, accounts payable/receivable). The `fin-daily-pulse` skill queries both sources.
+For a complete financial picture, EvoNexus combines Stripe data (revenue, subscriptions) with Omie ERP data (expenses, invoices, accounts payable/receivable). The `fin-daily-pulse` skill queries both sources.
 
 If you only use Stripe (no Omie), the financial routines still work -- they show revenue metrics and skip the expense/ERP sections.
 
@@ -4832,9 +4832,9 @@ The `int-youtube` skill queries the YouTube Data API:
 
 ---
 
-# What is OpenClaude
+# What is EvoNexus
 
-> **Note:** OpenClaude is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
+> **Note:** EvoNexus is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
 
 ## The Problem
 
@@ -4842,9 +4842,9 @@ Running a business means juggling dozens of tools, dashboards, and communication
 
 Most "AI assistants" are chatbots. You ask a question, you get an answer, and then you're back to manually copying data between tools. That doesn't scale.
 
-## What OpenClaude Is
+## What EvoNexus Is
 
-OpenClaude is a multi-agent workspace compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It turns a single Claude Code installation into a team of specialized agents that handle real operational work — not just answer questions.
+EvoNexus is a multi-agent workspace compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It turns a single Claude Code installation into a team of specialized agents that handle real operational work — not just answer questions.
 
 Each agent owns a domain (finance, projects, community, social media, strategy, sales, courses, personal wellness) and has the skills, memory, and integrations needed to operate independently. A scheduler runs routines on a daily, weekly, and monthly cadence, producing real outputs: HTML reports, triaged inboxes, synced meeting notes, financial snapshots, community health checks.
 
@@ -4859,7 +4859,7 @@ Each agent owns a domain (finance, projects, community, social media, strategy, 
 
 ## How It's Different
 
-| Chatbot | OpenClaude |
+| Chatbot | EvoNexus |
 |---------|------------|
 | You ask, it answers | Agents run routines on schedule |
 | Forgets between sessions | Persistent memory across sessions |
@@ -4917,7 +4917,7 @@ Two-tier persistence. `CLAUDE.md` holds working memory (who you are, active proj
 
 ## Open Source
 
-OpenClaude is MIT-licensed, built by [Evolution Foundation](https://evolutionfoundation.com.br). The source is at [github.com/EvolutionAPI/open-claude](https://github.com/EvolutionAPI/open-claude). This is an unofficial community project — not affiliated with or endorsed by Anthropic.
+EvoNexus is MIT-licensed, built by [Evolution Foundation](https://evolutionfoundation.com.br). The source is at [github.com/EvolutionAPI/evo-nexus](https://github.com/EvolutionAPI/evo-nexus). This is an unofficial community project — not affiliated with or endorsed by Anthropic.
 
 It's designed to be forked and adapted. Add your own agents, skills, routines, and integrations. The architecture is markdown-first — no complex plugin systems, just files that Claude Code reads.
 
@@ -4934,7 +4934,7 @@ The CEO runs operations, development coordination, community management, financi
 
 ## The Setup
 
-Evolution Foundation runs OpenClaude with all 16 agents active:
+Evolution Foundation runs EvoNexus with all 16 agents active:
 
 - **Clawdia** — daily ops, email, calendar, task management
 - **Flux** — Stripe revenue tracking, ERP integration (Omie), financial reports
@@ -5014,7 +5014,7 @@ On the 1st of each month:
 
 ## Results
 
-After running OpenClaude for daily operations:
+After running EvoNexus for daily operations:
 
 - **30+ hours saved per week** on routine operational tasks
 - **Zero missed follow-ups** — every meeting action item becomes a tracked task
@@ -5027,9 +5027,9 @@ The key insight: the value isn't in any single routine. It's in the compounding 
 
 ---
 
-# A Morning with OpenClaude
+# A Morning with EvoNexus
 
-What does it actually look like to start your day with OpenClaude running? Here's a walkthrough of a typical morning, from waking up to being fully productive.
+What does it actually look like to start your day with EvoNexus running? Here's a walkthrough of a typical morning, from waking up to being fully productive.
 
 ## 7:00 AM — "Good morning"
 
@@ -5113,7 +5113,7 @@ That's the difference between a chatbot and an operating layer.
 
 `CLAUDE.md` is a context file that Claude Code reads automatically at the start of every session. It's the primary mechanism for giving Claude persistent knowledge about you, your company, your projects, and your preferences.
 
-In OpenClaude, `CLAUDE.md` is generated by the setup wizard (`make setup`). `setup.py` generates CLAUDE.md inline — no template file needed. It serves as the "working memory" layer — the hot cache that every agent reads before doing anything.
+In EvoNexus, `CLAUDE.md` is generated by the setup wizard (`make setup`). `setup.py` generates CLAUDE.md inline — no template file needed. It serves as the "working memory" layer — the hot cache that every agent reads before doing anything.
 
 ## What Goes In It
 
@@ -5314,7 +5314,7 @@ All environment variables are defined in `.env` (generated by `make setup`). See
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `BACKUP_S3_BUCKET` | For S3 backups | S3 bucket name (any S3-compatible: AWS, MinIO, R2) |
-| `BACKUP_S3_PREFIX` | No | Folder inside the bucket (default: `openclaude-backups/`) |
+| `BACKUP_S3_PREFIX` | No | Folder inside the bucket (default: `evonexus-backups/`) |
 | `AWS_ACCESS_KEY_ID` | For S3 backups | AWS credentials (or S3-compatible) |
 | `AWS_SECRET_ACCESS_KEY` | For S3 backups | AWS credentials (or S3-compatible) |
 | `AWS_ENDPOINT_URL` | For non-AWS | Custom endpoint for MinIO, Cloudflare R2, etc. |
@@ -5351,7 +5351,7 @@ These are populated automatically when you connect accounts through the dashboar
 
 ## Required vs Optional
 
-**No variable is strictly required** -- OpenClaude works with whatever integrations you enable. But specific routines need their corresponding keys:
+**No variable is strictly required** -- EvoNexus works with whatever integrations you enable. But specific routines need their corresponding keys:
 
 | Routine | Required Variables |
 |---------|-------------------|
@@ -5375,7 +5375,7 @@ Google Calendar and Gmail are connected via MCP servers configured in Claude Cod
 
 ## Overview
 
-OpenClaude includes a lightweight, privacy-first licensing system. On first setup, your instance registers once with Evolution Foundation's server. That's it — no heartbeats, no monitoring, no periodic pings.
+EvoNexus includes a lightweight, privacy-first licensing system. On first setup, your instance registers once with Evolution Foundation's server. That's it — no heartbeats, no monitoring, no periodic pings.
 
 ## How It Works
 
@@ -5392,7 +5392,7 @@ The registration creates a unique `instance_id` for your installation based on y
 | `instance_id` | Unique identifier for this installation (SHA-256 hash of hostname + MAC) |
 | `email` | Admin email (from setup) |
 | `name` | Admin name (from setup) |
-| `version` | OpenClaude version |
+| `version` | EvoNexus version |
 | `geo` | Approximate location (country/city from IP, at registration time) |
 
 ### What It Does NOT Do
@@ -5405,7 +5405,7 @@ The registration creates a unique `instance_id` for your installation based on y
 
 ## Free Tier
 
-OpenClaude ships with a free tier that has no limitations. All agents, skills, routines, and dashboard features are available without paying anything.
+EvoNexus ships with a free tier that has no limitations. All agents, skills, routines, and dashboard features are available without paying anything.
 
 The registration exists solely to help Evolution Foundation understand adoption — how many instances exist and where — which informs development priorities.
 
@@ -5571,7 +5571,7 @@ make help            # Show all available commands with descriptions
 
 # workspace.yaml Reference
 
-The `config/workspace.yaml` file is the central configuration for your OpenClaude instance. It's generated by `make setup` and read by the dashboard, scheduler, and setup scripts.
+The `config/workspace.yaml` file is the central configuration for your EvoNexus instance. It's generated by `make setup` and read by the dashboard, scheduler, and setup scripts.
 
 ## Location
 
@@ -5697,7 +5697,7 @@ The setup wizard also generates these alongside `workspace.yaml`:
 
 # Core Routines
 
-Core routines are the backbone of the OpenClaude daily loop. They ship with the repo, are hardcoded in `scheduler.py`, and run automatically. Unlike custom routines (which live in `ADWs/routines/custom/` and are configured via `config/routines.yaml`), core routines require zero configuration.
+Core routines are the backbone of the EvoNexus daily loop. They ship with the repo, are hardcoded in `scheduler.py`, and run automatically. Unlike custom routines (which live in `ADWs/routines/custom/` and are configured via `config/routines.yaml`), core routines require zero configuration.
 
 There are 6 core routines. Together they form a closed loop: **orient in the morning, work during the day, consolidate at night, backup data, sync memory, and review weekly**.
 
@@ -5724,7 +5724,7 @@ There are 6 core routines. Together they form a closed loop: **orient in the mor
 1. Collects all gitignored files using `git ls-files --others --ignored --exclude-standard`
 2. Filters out heavy reconstructible dirs (`node_modules/`, `.venv/`, `__pycache__/`, `dist/`)
 3. Creates a ZIP with `manifest.json` (version, timestamp, hostname, file list)
-4. Saves to `backups/openclaude-backup-YYYYMMDD-HHMMSS.zip`
+4. Saves to `backups/evonexus-backup-YYYYMMDD-HHMMSS.zip`
 5. If `BACKUP_S3_BUCKET` env var is set, uploads the ZIP to S3
 
 ### Output

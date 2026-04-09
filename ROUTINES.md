@@ -1,4 +1,4 @@
-# OpenClaude — Routines & Scheduled Tasks
+# EvoNexus — Routines & Scheduled Tasks
 
 Routines are automated workflows that run on a schedule via the ADW Runner.
 

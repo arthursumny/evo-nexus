@@ -33,8 +33,8 @@ export default function Login() {
           {/* Logo */}
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold tracking-tight">
-              <span className="text-[#00FFA7]">Open</span>
-              <span className="text-white">Claude</span>
+              <span className="text-[#00FFA7]">Evo</span>
+              <span className="text-white">Nexus</span>
             </h1>
             <p className="text-[#667085] text-sm mt-2">Sign in to your dashboard</p>
           </div>

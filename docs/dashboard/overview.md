@@ -1,6 +1,6 @@
 # Dashboard Overview
 
-The OpenClaude web dashboard is a React + Flask application that gives you a visual interface to manage agents, routines, integrations, memory, and more.
+The EvoNexus web dashboard is a React + Flask application that gives you a visual interface to manage agents, routines, integrations, memory, and more.
 
 ## Starting the Dashboard
 
@@ -22,7 +22,7 @@ dashboard:
 Or via environment variable:
 
 ```bash
-OPENCLAUDE_PORT=9090 make dashboard-app
+EVONEXUS_PORT=9090 make dashboard-app
 ```
 
 ## First Run Setup

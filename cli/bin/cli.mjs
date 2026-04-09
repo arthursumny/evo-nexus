@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * @evoapicloud/open-claude CLI
+ * @evoapi/evo-nexus CLI
  *
  * Usage:
- *   npx @evoapicloud/open-claude          — clone + setup in current dir
- *   npx @evoapicloud/open-claude my-workspace  — clone into my-workspace/
- *   npx @evoapicloud/open-claude --help
+ *   npx @evoapi/evo-nexus          — clone + setup in current dir
+ *   npx @evoapi/evo-nexus my-workspace  — clone into my-workspace/
+ *   npx @evoapi/evo-nexus --help
  */
 
 import { execSync, spawn } from "child_process";
@@ -14,7 +14,7 @@ import { existsSync } from "fs";
 import { resolve, basename } from "path";
 import { createInterface } from "readline";
 
-const REPO = "https://github.com/EvolutionAPI/open-claude.git";
+const REPO = "https://github.com/EvolutionAPI/evo-nexus.git";
 const GREEN = "\x1b[92m";
 const CYAN = "\x1b[96m";
 const YELLOW = "\x1b[93m";
@@ -26,7 +26,7 @@ const RESET = "\x1b[0m";
 function banner() {
   console.log(`
 ${GREEN}  ╔══════════════════════════════════════╗
-  ║   ${BOLD}OpenClaude — Installer${RESET}${GREEN}            ║
+  ║   ${BOLD}EvoNexus — Installer${RESET}${GREEN}            ║
   ║   ${DIM}Unofficial toolkit for Claude Code${RESET}${GREEN}  ║
   ╚══════════════════════════════════════╝${RESET}
 `);
@@ -60,20 +60,20 @@ async function main() {
 
   if (args.includes("--help") || args.includes("-h")) {
     console.log(`
-  Usage: npx @evoapicloud/open-claude [directory]
+  Usage: npx @evoapi/evo-nexus [directory]
 
-  Clones the OpenClaude repository and runs the interactive setup wizard.
+  Clones the EvoNexus repository and runs the interactive setup wizard.
 
   Arguments:
-    directory    Target directory (default: open-claude)
+    directory    Target directory (default: evonexus)
 
   Options:
     --help, -h   Show this help
     --version    Show version
 
   Examples:
-    npx @evoapicloud/open-claude
-    npx @evoapicloud/open-claude my-workspace
+    npx @evoapi/evo-nexus
+    npx @evoapi/evo-nexus my-workspace
 `);
     process.exit(0);
   }
@@ -144,7 +144,7 @@ async function main() {
         process.exit(0);
       }
     }
-    console.log(`  ${BOLD}Cloning OpenClaude into current directory...${RESET}\n`);
+    console.log(`  ${BOLD}Cloning EvoNexus into current directory...${RESET}\n`);
     run(`git clone ${REPO} .`, { cwd: targetPath });
     console.log();
   } else if (existsSync(targetPath)) {
@@ -154,7 +154,7 @@ async function main() {
       process.exit(0);
     }
   } else {
-    console.log(`  ${BOLD}Cloning OpenClaude...${RESET}\n`);
+    console.log(`  ${BOLD}Cloning EvoNexus...${RESET}\n`);
     run(`git clone ${REPO} "${targetPath}"`);
     console.log();
   }
@@ -197,7 +197,7 @@ async function main() {
       }
 
       console.log(`
-  ${GREEN}${BOLD}OpenClaude installed successfully!${RESET}
+  ${GREEN}${BOLD}EvoNexus installed successfully!${RESET}
 
   ${BOLD}Next steps:${RESET}
   ${CYAN}1.${RESET} cd ${targetDir}
@@ -206,8 +206,8 @@ async function main() {
   ${CYAN}4.${RESET} Open ${BOLD}http://localhost:8080${RESET} and create your admin account
   ${CYAN}5.${RESET} ${BOLD}make help${RESET}             — see all available commands
 
-  ${DIM}Documentation: https://openclaude.evolutionfoundation.com.br/docs${RESET}
-  ${DIM}GitHub: https://github.com/EvolutionAPI/open-claude${RESET}
+  ${DIM}Documentation: https://evonexus.evolutionfoundation.com.br/docs${RESET}
+  ${DIM}GitHub: https://github.com/EvolutionAPI/evo-nexus${RESET}
 `);
     } else {
       console.log(`\n  ${RED}Setup failed (exit code ${code}).${RESET}`);

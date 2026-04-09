@@ -2,7 +2,7 @@
 
 ## Overview
 
-OpenClaude is a file-based, git-friendly framework. Everything is markdown, YAML, and Python scripts. No database required for the core framework (SQLite is used only by the dashboard).
+EvoNexus is a file-based, git-friendly framework. Everything is markdown, YAML, and Python scripts. No database required for the core framework (SQLite is used only by the dashboard).
 
 ```
 ┌─────────────────────────────────────────────────┐

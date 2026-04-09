@@ -1,6 +1,6 @@
 {
-  "name": "@evoapi/open-claude",
-  "version": "0.11.0",
+  "name": "@evoapi/evo-nexus",
+  "version": "0.11.1",
   "description": "Unofficial open source toolkit for Claude Code — AI-powered business operating system",
   "keywords": [
     "claude-code",
@@ -11,15 +11,15 @@
     "evolution"
   ],
   "bin": {
-    "open-claude": "bin/cli.mjs"
+    "evonexus": "bin/cli.mjs"
   },
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvolutionAPI/open-claude.git"
+    "url": "git+https://github.com/EvolutionAPI/evo-nexus.git"
   },
-  "homepage": "https://openclaude.evolutionfoundation.com.br",
+  "homepage": "https://evonexus.evolutionfoundation.com.br",
   "author": "Evolution Foundation <contato@evolutionfoundation.com.br>",
   "engines": {
     "node": ">=18"

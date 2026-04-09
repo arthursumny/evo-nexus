@@ -33,7 +33,7 @@ def list_backups():
         return jsonify({"backups": [], "total": 0})
 
     backups = []
-    for z in sorted(BACKUPS_DIR.glob("openclaude-backup-*.zip"), reverse=True):
+    for z in sorted(BACKUPS_DIR.glob("evonexus-backup-*.zip"), reverse=True):
         info = {
             "filename": z.name,
             "size": z.stat().st_size,

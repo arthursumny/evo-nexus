@@ -1,4 +1,4 @@
-"""Flask backend for the workspace dashboard — OpenClaude."""
+"""Flask backend for the workspace dashboard — EvoNexus."""
 
 import os
 import sys
@@ -22,7 +22,7 @@ sys.path.insert(0, str(WORKSPACE / "social-auth"))
 
 app = Flask(__name__, static_folder=None)
 # Persist secret key so sessions survive restarts
-_secret_key = os.environ.get("OPENCLAUDE_SECRET_KEY")
+_secret_key = os.environ.get("EVONEXUS_SECRET_KEY")
 if not _secret_key:
     _key_file = WORKSPACE / "dashboard" / "data" / ".secret_key"
     _key_file.parent.mkdir(parents=True, exist_ok=True)
@@ -34,7 +34,7 @@ if not _secret_key:
         _key_file.chmod(0o600)
 
 app.secret_key = _secret_key
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{WORKSPACE / 'dashboard' / 'data' / 'openclaude.db'}"
+app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{WORKSPACE / 'dashboard' / 'data' / 'evonexus.db'}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["REMEMBER_COOKIE_DURATION"] = timedelta(days=30)
 CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
@@ -238,7 +238,7 @@ def api_version_check():
 
     try:
         resp = http_requests.get(
-            "https://api.github.com/repos/EvolutionAPI/open-claude/releases/latest",
+            "https://api.github.com/repos/EvolutionAPI/evo-nexus/releases/latest",
             timeout=10,
             headers={"Accept": "application/vnd.github.v3+json"},
         )
@@ -287,7 +287,7 @@ def serve_frontend(path):
 
 if __name__ == "__main__":
     # Read port from workspace.yaml or env, fallback to 8080
-    port = int(os.environ.get("OPENCLAUDE_PORT", 8080))
+    port = int(os.environ.get("EVONEXUS_PORT", 8080))
     try:
         import yaml
         config_path = WORKSPACE / "config" / "workspace.yaml"

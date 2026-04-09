@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenClaude Scheduler
+EvoNexus Scheduler
 Runs core routines on schedule. Custom routines loaded from config/routines.yaml.
 Usage: runs automatically with make dashboard-app
 """
@@ -115,7 +115,7 @@ def main():
     """Entry point — standalone scheduler."""
     import schedule
 
-    print("OpenClaude Scheduler")
+    print("EvoNexus Scheduler")
     setup_schedule()
     total = len(schedule.get_jobs())
     print(f"  {total} routines scheduled")

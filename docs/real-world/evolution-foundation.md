@@ -8,7 +8,7 @@ The CEO runs operations, development coordination, community management, financi
 
 ## The Setup
 
-Evolution Foundation runs OpenClaude with all 16 agents active:
+Evolution Foundation runs EvoNexus with all 16 agents active:
 
 - **Clawdia** — daily ops, email, calendar, task management
 - **Flux** — Stripe revenue tracking, ERP integration (Omie), financial reports
@@ -88,7 +88,7 @@ On the 1st of each month:
 
 ## Results
 
-After running OpenClaude for daily operations:
+After running EvoNexus for daily operations:
 
 - **30+ hours saved per week** on routine operational tasks
 - **Zero missed follow-ups** — every meeting action item becomes a tracked task

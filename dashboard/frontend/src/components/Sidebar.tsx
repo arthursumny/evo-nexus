@@ -216,8 +216,8 @@ export default function Sidebar() {
     <>
       <div className="px-5 py-6 flex items-center justify-between">
         <h1 className="text-xl font-bold tracking-tight">
-          <span className="text-[#00FFA7]">Open</span>
-          <span className="text-white">Claude</span>
+          <span className="text-[#00FFA7]">Evo</span>
+          <span className="text-white">Nexus</span>
         </h1>
         <button onClick={() => setMobileOpen(false)} className="lg:hidden p-1 rounded hover:bg-white/10 text-[#667085]">
           <X size={20} />

@@ -1,6 +1,6 @@
-# What is OpenClaude
+# What is EvoNexus
 
-> **Note:** OpenClaude is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
+> **Note:** EvoNexus is an independent, **unofficial open-source project**. It is **not affiliated with, endorsed by, or sponsored by Anthropic**. "Claude" and "Claude Code" are trademarks of Anthropic, PBC. This project integrates with Claude Code as a third-party tool and requires users to provide their own installation and credentials.
 
 ## The Problem
 
@@ -8,9 +8,9 @@ Running a business means juggling dozens of tools, dashboards, and communication
 
 Most "AI assistants" are chatbots. You ask a question, you get an answer, and then you're back to manually copying data between tools. That doesn't scale.
 
-## What OpenClaude Is
+## What EvoNexus Is
 
-OpenClaude is a multi-agent workspace compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It turns a single Claude Code installation into a team of specialized agents that handle real operational work — not just answer questions.
+EvoNexus is a multi-agent workspace compatible with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and other LLM tooling. It turns a single Claude Code installation into a team of specialized agents that handle real operational work — not just answer questions.
 
 Each agent owns a domain (finance, projects, community, social media, strategy, sales, courses, personal wellness) and has the skills, memory, and integrations needed to operate independently. A scheduler runs routines on a daily, weekly, and monthly cadence, producing real outputs: HTML reports, triaged inboxes, synced meeting notes, financial snapshots, community health checks.
 
@@ -25,7 +25,7 @@ Each agent owns a domain (finance, projects, community, social media, strategy, 
 
 ## How It's Different
 
-| Chatbot | OpenClaude |
+| Chatbot | EvoNexus |
 |---------|------------|
 | You ask, it answers | Agents run routines on schedule |
 | Forgets between sessions | Persistent memory across sessions |
@@ -83,6 +83,6 @@ Two-tier persistence. `CLAUDE.md` holds working memory (who you are, active proj
 
 ## Open Source
 
-OpenClaude is MIT-licensed, built by [Evolution Foundation](https://evolutionfoundation.com.br). The source is at [github.com/EvolutionAPI/open-claude](https://github.com/EvolutionAPI/open-claude). This is an unofficial community project — not affiliated with or endorsed by Anthropic.
+EvoNexus is MIT-licensed, built by [Evolution Foundation](https://evolutionfoundation.com.br). The source is at [github.com/EvolutionAPI/evo-nexus](https://github.com/EvolutionAPI/evo-nexus). This is an unofficial community project — not affiliated with or endorsed by Anthropic.
 
 It's designed to be forked and adapted. Add your own agents, skills, routines, and integrations. The architecture is markdown-first — no complex plugin systems, just files that Claude Code reads.

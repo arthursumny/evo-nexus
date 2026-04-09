@@ -120,8 +120,8 @@ export default function Docs() {
         <div className="flex items-center gap-2">
           <BookOpen size={20} className="text-[#00FFA7]" />
           <span className="text-lg font-bold">
-            <span className="text-[#00FFA7]">Open</span>
-            <span className="text-white">Claude</span>
+            <span className="text-[#00FFA7]">Evo</span>
+            <span className="text-white">Nexus</span>
             <span className="text-[#667085] ml-1.5 text-sm font-normal">Docs</span>
           </span>
         </div>
